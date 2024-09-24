@@ -195,12 +195,13 @@
 }
 
 .card__icon-button {
+  display: flex;
   border: 2px solid transparent;
   background-color: transparent;
   cursor: pointer;
   inline-size: 39px;
   transition: border 0.3s ease;
-  block-size: 37px;
+
 }
 
 .card__icon-button:focus {
@@ -217,6 +218,10 @@
   object-position: center;
 }
 
+.sparks {
+  opacity: 0;
+}
+
 .card__like-button {
   display: flex;
   position: relative;
@@ -224,7 +229,7 @@
   align-self: flex-end;
   border: 0;
   border: 2px solid var(--text-color);
-  padding: 10.5px 35px;
+  padding: 12px 35px;
   background-color: transparent;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
