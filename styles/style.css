@@ -113,7 +113,7 @@
   inset-block-start: 1px;
   inline-size: 14px;
   block-size: 14px;
-  animation: pointer ease-in-out infinite 0.5s alternate ;
+  animation: pointer ease-in-out infinite 0.5s alternate;
 }
 
 .content {
@@ -196,13 +196,61 @@
 
 .card__icon-button {
   display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px solid transparent;
   background-color: transparent;
   cursor: pointer;
-  inline-size: 39px;
+  inline-size: 43px;
   transition: border 0.3s ease;
 
 }
+
+.like-icon {
+  inline-size: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.contour {
+  fill: var(--text-color);
+  transition: fill 0.1s linear;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.sparks {
+  fill: var(--heart);
+  opacity: 0;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--contour-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--contour-color);
+  transition: fill 0.3s linear;
+} 
+
+.card__icon-button:active .main-body {
+  fill: var(--heart);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:active .core {
+  fill: var(--heart);
+  transition: fill 0.3s linear;
+} 
 
 .card__icon-button:focus {
   outline: none;
@@ -212,24 +260,40 @@
   border: 2px solid var(--text-color);
 }
 
-.like-icon {
-  inline-size: 100%;
-  object-fit: contain;
-  object-position: center;
+.like-icon.is-liked .main-body {
+  fill: var(--heart);
+  transition: fill 0.3s linear 0.05s;
 }
 
-.sparks {
-  opacity: 0;
+.like-icon.is-liked .core {
+  fill: var(--heart);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart);
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: liked-heart ease-in 0.1s 0.3s alternate;
+}
+
+.like-icon.is-liked .sparks {
+  animation: liked-heart-sparks ease-in 0.3s 0.3s alternate;
 }
 
 .card__like-button {
   display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   gap: 8px;
   align-self: flex-end;
-  border: 0;
   border: 2px solid var(--text-color);
-  padding: 12px 35px;
+  block-size: 40px;
+  inline-size: 130px;
   background-color: transparent;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
@@ -242,7 +306,7 @@
   mix-blend-mode: difference;
 }
 
-.button-text {
+.button__text {
   position: relative;
   z-index: 1;
   font-family: var(--accent-font);
@@ -291,13 +355,26 @@
   transform: scaleX(1);
 }
 
-
-
 @keyframes pointer {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(4px);
+  }
+}
+
+@keyframes liked-heart {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes liked-heart-sparks {
+  to {
+    opacity: 1;
   }
 }
