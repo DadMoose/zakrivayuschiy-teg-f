@@ -249,7 +249,7 @@
   font-size: 14px;
   line-height: 90%;
   mix-blend-mode: difference;
-  color: var(--bg-color);
+  color: var(--reversed-text);
 }
 
 .save-button {
