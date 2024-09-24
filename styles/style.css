@@ -236,7 +236,7 @@
 }
 
 .floppy {
-  color:var(--bg-color);
+  color: var(--reversed-text);
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
