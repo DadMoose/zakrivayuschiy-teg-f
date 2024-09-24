@@ -203,6 +203,7 @@
 
 .card__like-button {
   display: flex;
+  position: relative;
   gap: 8px;
   align-self: flex-end;
   border: 0;
@@ -213,14 +214,26 @@
   transition: box-shadow 0.3s ease;
 }
 
+.floppy {
+  color:var(--bg-color);
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
 .button-text {
+  position: relative;
+  z-index: 1;
   font-family: var(--accent-font);
   font-size: 14px;
   line-height: 90%;
+  mix-blend-mode: difference;
+  color: var(--bg-color);
 }
 
 .save-button {
   display: flex;
+  position: relative;
   align-items: center;
   gap: 8px;
   align-self: flex-end;
@@ -231,6 +244,33 @@
   cursor: pointer;
   transition: box-shadow 0.3s ease;
 }
+
+.card__like-button:focus-visible,
+.save-button:focus-visible {
+  outline:none;
+  box-shadow: 2px 2px 0 var(--text-color);
+}
+
+.card__like-button:after,
+.save-button:after {
+  content: '';
+  position: absolute;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--text-color);
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+}
+
+.card__like-button:hover:after,
+.save-button:hover:after {
+  transform: scaleX(1);
+}
+
+
 
 @keyframes pointer {
   from {
