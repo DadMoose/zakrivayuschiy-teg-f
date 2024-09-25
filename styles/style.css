@@ -300,10 +300,11 @@
 }
 
 .floppy {
-  color: var(--reversed-text);
+  fill: var(--reversed-text);
+  stroke: var(--reversed-text);
   position: relative;
   z-index: 1;
-  mix-blend-mode: difference;
+  mix-blend-mode: difference; 
 }
 
 .button__text {
@@ -331,13 +332,15 @@
 }
 
 .card__like-button:focus-visible,
-.save-button:focus-visible {
+.save-button:focus-visible,
+.save-dialog__button:focus-visible {
   outline:none;
   box-shadow: 2px 2px 0 var(--text-color);
 }
 
 .card__like-button:after,
-.save-button:after {
+.save-button:after,
+.save-dialog__button:after {
   content: '';
   position: absolute;
   inline-size: 100%;
@@ -351,8 +354,57 @@
 }
 
 .card__like-button:hover:after,
-.save-button:hover:after {
+.save-button:hover:after,
+.save-dialog__button:hover:after {
   transform: scaleX(1);
+}
+
+.save-dialog {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 150%;
+  gap: 30px;
+  border: 2px solid var(--text-color);
+  padding: 30px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.save-dialog:not([open]) {
+  display: none;
+}
+
+.save-dialog::backdrop {
+  background-color: var(--backdrop-color);
+  opacity: 0.75;
+}
+
+.save-dialog__description {
+  display: flex;
+  align-items: center;
+  gap: 20px
+}
+
+.save-dialog__text {
+  display: block;
+  inline-size: 234px;
+}
+
+.save-dialog__button {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px solid var(--text-color);
+  padding: 10px 0;
+  background-color: var(--bg-color);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  text-transform: uppercase;
 }
 
 @keyframes pointer {
