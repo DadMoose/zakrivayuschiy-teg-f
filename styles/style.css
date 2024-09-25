@@ -350,6 +350,7 @@
 .save-button {
   position: relative;
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 8px;
   align-self: flex-end;
@@ -421,6 +422,25 @@
 .save-dialog__text {
   display: block;
   inline-size: 234px;
+}
+
+@media (max-width: 375px) {
+  .save-dialog {
+    padding: 30px 40px;
+  }
+
+  .save-dialog__text {
+    inline-size: 198px;
+  }
+
+  .save-button {
+    flex-direction: column;
+  }
+
+  .card__image-label {
+    inset-inline-end: 11px;
+    inset-block-start: 23px;
+  }
 }
 
 .save-dialog__button {
