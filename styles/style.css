@@ -230,7 +230,6 @@
   align-items: center;
   border: 2px solid transparent;
   background-color: transparent;
-  transition: border 0.3s ease;
   cursor: pointer;
   inline-size: 43px;
   block-size: 38px;
@@ -240,78 +239,6 @@
   object-fit: contain;
   object-position: center;
   inline-size: 100%;
-}
-
-.contour {
-  fill: var(--text-color);
-  transition: fill 0.1s linear;
-}
-
-.main-body {
-  fill: transparent;
-  transition: fill 0.3s linear;
-}
-
-.core {
-  fill: transparent;
-  transition: fill 0.3s linear 0.03s;
-}
-
-.sparks {
-  opacity: 0;
-  fill: var(--heart);
-}
-
-.card__icon-button:hover .main-body {
-  fill: var(--contour-color);
-  transition: fill 0.3s linear 0.05s;
-}
-
-.card__icon-button:hover .core {
-  fill: var(--contour-color);
-  transition: fill 0.3s linear;
-}
-
-.card__icon-button:active .main-body {
-  fill: var(--heart);
-  transition: fill 0.3s linear 0.05s;
-}
-
-.card__icon-button:active .core {
-  fill: var(--heart);
-  transition: fill 0.3s linear;
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  border: 2px solid var(--text-color);
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--heart);
-  transition: fill 0.3s linear 0.05s;
-}
-
-.like-icon.is-liked .core {
-  fill: var(--heart);
-  transition: fill 0.3s linear;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--heart);
-  transition: fill 0.3s linear 0.06s;
-}
-
-.like-icon.is-liked .heart {
-  transform-origin: center;
-  animation: liked-heart ease-in 0.1s 0.3s alternate;
-}
-
-.like-icon.is-liked .sparks {
-  animation: liked-heart-sparks ease-in 0.3s 0.3s alternate;
 }
 
 .card__like-button {
@@ -455,28 +382,4 @@
   background-color: var(--bg-color);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
-}
-
-@keyframes pointer {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(4px);
-  }
-}
-
-@keyframes liked-heart {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.5);
-  }
-}
-
-@keyframes liked-heart-sparks {
-  to {
-    opacity: 1;
-  }
 }
