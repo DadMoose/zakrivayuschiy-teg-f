@@ -28,7 +28,7 @@
 }
 
 .header {
-  margin-block-start: clamp(6.25rem, 5.231vw + 5.024rem, 7.313rem);
+  margin-block-start: 100px;
   border: 2px solid var(--text-color);
   font-family: var(--accent-font);
   text-align: center;
@@ -57,7 +57,7 @@
   flex-direction: column;
   align-items: start;
   gap: 11px;
-  margin: 21px 0 22px;
+  margin: 22px 0 23px;
   font-size: 14px;
   inline-size: 64px;
 }
@@ -117,7 +117,7 @@
 }
 
 .content {
-  margin-block-start: 101px;
+  margin-block-start: 100px;
   inline-size: 100%;
 }
 
@@ -146,10 +146,40 @@
 }
 
 .card__image-picture {
-  object-fit: cover;
-  object-position: right;
   inline-size: 100%;
+}
+
+.first-picture {
+  filter: contrast(120%);
+}
+
+.second-picture {
+  filter: grayscale(1) sepia(10%);
+}
+
+.third-picture {
+  filter: brightness(80%);
+}
+
+.fourth-picture {
+  filter: opacity(0.9);
+}
+
+.fifth-picture {
+  object-fit: cover;
   aspect-ratio: 1 / 1;
+}
+
+.sixth-picture {
+  filter: invert(0.1);
+}
+
+.seventh-picture {
+  filter: hue-rotate(30deg);
+}
+
+.eighth-picture {
+  filter: saturate(190%);
 }
 
 .card__image-label {
@@ -174,7 +204,7 @@
 .card__description {
   display: flex;
   flex-direction: column;
-  gap: 23px;
+  gap: 25px;
   border-block-start: 2px solid var(--text-color);
   padding: 25px 25px 25px 25px;
 }
@@ -190,7 +220,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 9px;
+  gap: 4px;
   border: 0;
 }
 
@@ -202,6 +232,7 @@
   background-color: transparent;
   cursor: pointer;
   inline-size: 43px;
+  block-size: 38px;
   transition: border 0.3s ease;
 
 }
@@ -292,7 +323,7 @@
   gap: 8px;
   align-self: flex-end;
   border: 2px solid var(--text-color);
-  block-size: 40px;
+  block-size: 38px;
   inline-size: 130px;
   background-color: transparent;
   cursor: pointer;
