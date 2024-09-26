@@ -44,9 +44,9 @@
     --gradient-strip-color: var(--bg-color);
     --gradient-start: #007f0c;
     --gradient-end: #004306;
-    --reversed-text: var(--bg-color);
+    --reversed-text: var(--text-color);
     --heart: #ff0000;
-    --contour-color: var(--bg-color);
+    --contour-color: var(--text-color);
     --main-body-color: var(--heart);
     --backdrop-color: #000;
   }
