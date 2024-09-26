@@ -16,7 +16,7 @@
 
 .page {
   color: var(--text-color);
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font), Verdana, sans-serif;
   background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-position: center;
@@ -30,7 +30,7 @@
 .header {
   margin-block-start: 100px;
   border: 2px solid var(--text-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), 'Courier New' , monospace;
   text-align: center;
   text-transform: uppercase;
   background-color: var(--bg-color);
@@ -40,12 +40,12 @@
 .header__logo {
   display: block;
   text-decoration: none;
-  margin-block-start: clamp(7.438rem, 2.985vw + 6.757rem, 8.063rem);
+  margin-block-start: clamp(7.5rem, 6.769vw + 5.913rem, 8.5rem);
   font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
 }
 
 .header__title {
-  margin-block-start: 12px;
+  margin-block-start: 20px;
   font-size: clamp(0.875rem, 0.2179rem + 2.8037vw, 1.4375rem);
 }
 
@@ -58,8 +58,8 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 11px;
-  margin: 22px 0 23px;
+  gap: 14px;
+  margin: 25px 0 25px;
   font-size: 14px;
   inline-size: 64px;
 }
@@ -185,12 +185,12 @@
 .card__image-label {
   position: absolute;
   opacity: 0.5;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), 'Courier New' , monospace;
   font-size: 14px;
   text-transform: uppercase;
   text-shadow: 0 0 5px var(--bg-color);
   inset-inline-end: 25px;
-  inset-block-start: 25px;
+  inset-block-start: 31px;
   mix-blend-mode: hard-light;
 }
 
@@ -271,7 +271,7 @@
   position: relative;
   z-index: 1;
   color: var(--reversed-text);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), 'Courier New' , monospace;
   font-size: 14px;
   line-height: 90%;
   mix-blend-mode: difference;
@@ -321,7 +321,7 @@
   border: 2px solid var(--text-color);
   padding: 30px;
   color: var(--text-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), 'Courier New' , monospace;
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
@@ -363,7 +363,7 @@
 
   .card__image-label {
     inset-inline-end: 11px;
-    inset-block-start: 23px;
+    inset-block-start: 30px;
   }
 }
 

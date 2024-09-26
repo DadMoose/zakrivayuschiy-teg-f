@@ -46,7 +46,7 @@
     --gradient-end: #004306;
     --reversed-text: var(--bg-color);
     --heart: #ff0000;
-    --contour-color: var(--text-color);
+    --contour-color: var(--bg-color);
     --main-body-color: var(--heart);
     --backdrop-color: #000;
   }
