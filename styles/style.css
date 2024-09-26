@@ -194,10 +194,13 @@
   mix-blend-mode: hard-light;
 }
 
-@supports (-webkit-text-stroke: 1px #fff) {
+@supports ((-webkit-text-stroke: 1px #fff) or (-text-stroke: 1px var(--bg-color))) {
   .card__image-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--bg-color);
+    -text-stroke: 1px var(--bg-color);
+    /*Also define the standard property 'stroke' for compatibilitycss(vendorPrefix)*/
+    stroke: 1px var(--bg-color);
   }
 }
 
@@ -289,16 +292,12 @@
   cursor: pointer;
 }
 
-.card__like-button:focus-visible,
-.save-button:focus-visible,
-.save-dialog__button:focus-visible {
+.content-button:focus-visible {
   box-shadow: 2px 2px 0 var(--text-color);
   outline: none;
 }
 
-.card__like-button:after,
-.save-button:after,
-.save-dialog__button:after {
+.content-button:after {
   content: "";
   position: absolute;
   background-color: var(--text-color);
@@ -311,9 +310,7 @@
   inset-block-start: 0;
 }
 
-.card__like-button:hover:after,
-.save-button:hover:after,
-.save-dialog__button:hover:after {
+.content-button:hover:after {
   transform: scaleX(1);
 }
 
