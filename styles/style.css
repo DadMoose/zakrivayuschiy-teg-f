@@ -149,36 +149,36 @@
   inline-size: 100%;
 }
 
-.first-picture {
+.open-picture {
   filter: contrast(120%);
 }
 
-.second-picture {
+.dog-picture {
   filter: grayscale(1) sepia(10%);
 }
 
-.third-picture {
+.baloons-picture {
   filter: brightness(80%);
 }
 
-.fourth-picture {
+.road-picture {
   filter: opacity(0.9);
 }
 
-.fifth-picture {
+.hands-picture {
   object-fit: cover;
   aspect-ratio: 1 / 1;
 }
 
-.sixth-picture {
+.glass-sphere-picture {
   filter: invert(0.1);
 }
 
-.seventh-picture {
+.headache-picture {
   filter: hue-rotate(30deg);
 }
 
-.eighth-picture {
+.sunset-sea-picture {
   filter: saturate(190%);
 }
 
@@ -194,13 +194,11 @@
   mix-blend-mode: hard-light;
 }
 
-@supports ((-webkit-text-stroke: 1px #fff) or (-text-stroke: 1px var(--bg-color))) {
+@supports ((-webkit-text-stroke: 1px #fff) or (text-stroke: 1px var(--bg-color))) {
   .card__image-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--bg-color);
-    -text-stroke: 1px var(--bg-color);
-    /*Also define the standard property 'stroke' for compatibilitycss(vendorPrefix)*/
-    stroke: 1px var(--bg-color);
+    text-stroke: 1px var(--bg-color);
   }
 }
 
@@ -364,6 +362,11 @@
   .card__image-label {
     inset-inline-end: 11px;
     inset-block-start: 30px;
+  }
+
+  .save-button__floppy {
+    inline-size: 28px;
+    block-size: 28px;
   }
 }
 

@@ -45,7 +45,7 @@
     <section class="card">
       <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
       <div class="card__image">
-        <img class="first-picture card__image-picture" src="./images/first.jpg" alt="Вывеска 'Open' на окне заведения">
+        <img class="open-picture card__image-picture" src="./images/first.jpg" alt="Вывеска 'Open' на окне заведения">
         <span class="card__image-label">&lt;/Начало&gt;</span>
       </div>
       <div class="card__description">
@@ -83,7 +83,7 @@
     <section class="card">
       <h2 class="card__title">1 спринт: Я — чистый лист</h2>
       <div class="card__image">
-        <img class="second-picture card__image-picture" src="./images/second.jpg" alt="Грустная собака за деревянным забором смотрит в камеру через щёлочку">
+        <img class="dog-picture card__image-picture" src="./images/second.jpg" alt="Грустная собака за деревянным забором смотрит в камеру через щёлочку">
         <span class="card__image-label">&lt;/Страх&gt;</span>
       </div>
       <div class="card__description">
@@ -123,7 +123,7 @@
     <section class="card">
       <h2 class="card__title">1 спринт: А если не получится?</h2>
       <div class="card__image">
-        <img class="third-picture card__image-picture" src="./images/third.jpg" alt="Разноцветные воздушные шарики на фоне неба">
+        <img class="baloons-picture card__image-picture" src="./images/third.jpg" alt="Разноцветные воздушные шарики на фоне неба">
         <span class="card__image-label">&lt;/Уверенность&gt;</span>
       </div>
       <div class="card__description">
@@ -162,7 +162,7 @@
     <section class="card">
       <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
       <div class="card__image">
-        <img class="fourth-picture card__image-picture" src="./images/fourth.jpg" alt="Асфальтированная дорога посреди степи уходящая вдаль, горы на заднем плане ">
+        <img class="road-picture card__image-picture" src="./images/fourth.jpg" alt="Асфальтированная дорога посреди степи уходящая вдаль, горы на заднем плане ">
         <span class="card__image-label">&lt;/Прогресс&gt;</span>
       </div>
       <div class="card__description">
@@ -201,7 +201,7 @@
     <section class="card">
       <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
       <div class="card__image">
-        <img class="fifth-picture card__image-picture" src="./images/fifth.jpg" alt="Много рук людей совместно держащих ствол дерева">
+        <img class="hands-picture card__image-picture" src="./images/fifth.jpg" alt="Много рук людей совместно держащих ствол дерева">
         <span class="card__image-label">&lt;/Поддержка&gt;</span>
       </div>
       <div class="card__description">
@@ -241,7 +241,7 @@
     <section class="card">
       <h2 class="card__title">3 спринт: Обходные стратегии</h2>
       <div class="card__image">
-        <img class="sixth-picture card__image-picture" src="./images/sixth.jpg" alt="Рука держит стеклянный шар в фокусе, в шаре отражается перевёрнутый город">
+        <img class="glass-sphere-picture card__image-picture" src="./images/sixth.jpg" alt="Рука держит стеклянный шар в фокусе, в шаре отражается перевёрнутый город">
         <span class="card__image-label">&lt;/Перспектива&gt;</span>
       </div>
       <div class="card__description">
@@ -279,7 +279,7 @@
     <section class="card">
       <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
       <div class="card__image">
-        <img class="seventh-picture card__image-picture" src="./images/seventh.jpg" alt="Портерт человека с перемотанной фольгой головой в кислотных цветах">
+        <img class="headache-picture card__image-picture" src="./images/seventh.jpg" alt="Портерт человека с перемотанной фольгой головой в кислотных цветах">
         <span class="card__image-label">&lt;/Концентрация&gt;</span>
       </div>
       <div class="card__description">
@@ -319,7 +319,7 @@
     <section class="card">
       <h2 class="card__title">«Сейчас я здесь»</h2>
       <div class="card__image">
-        <img class="eighth-picture card__image-picture" src="./images/eighth.jpg" alt="Человек на фоне моря на закате смотрит на горизонт">
+        <img class="sunset-sea-picture card__image-picture" src="./images/eighth.jpg" alt="Человек на фоне моря на закате смотрит на горизонт">
         <span class="card__image-label">&lt;/Познание&gt;</span>
       </div>
       <div class="card__description">
@@ -358,7 +358,7 @@
       </div>
     </section>
     <button class="save-button content-button" type="button" onclick="window.saveDialog.showModal()" aria-controls="saveDialog">
-      <svg width="21" height="21" viewBox="0 0 21 21" class="floppy">
+      <svg width="21" height="21" viewBox="0 0 21 21" class="floppy save-button__floppy">
         <use href="./svg/floppy.svg#floppy"></use>
       </svg>
       <span class="button__text">Сохранить на память</span>
@@ -371,9 +371,7 @@
         <p class="save-dialog__text">Вставьте дискету, чтобы продолжить</p>
       </div>
       <form method="dialog">
-        <button class="save-dialog__button content-button" type="button" onclick="window.saveDialog.close()">
-          <!-- Закрытие через нативную форму не пропускают автотесты, вернул onclick-->
-          <!-- 1. Файл: `index.html`, строка: 374. Bad value “sumbit” for attribute “type” on element “button”..-->
+        <button class="save-dialog__button content-button" type="submit">
           <span class="button__text">ок</span>
         </button>
       </form>
