@@ -149,36 +149,36 @@
   inline-size: 100%;
 }
 
-.open-picture {
+.contrast-filter {
   filter: contrast(120%);
 }
 
-.dog-picture {
+.graysepia-filter {
   filter: grayscale(1) sepia(10%);
 }
 
-.baloons-picture {
+.brightness-filter {
   filter: brightness(80%);
 }
 
-.road-picture {
+.opacity-filter {
   filter: opacity(0.9);
 }
 
-.hands-picture {
+.square-picture {
   object-fit: cover;
   aspect-ratio: 1 / 1;
 }
 
-.glass-sphere-picture {
+.invert-filter {
   filter: invert(0.1);
 }
 
-.headache-picture {
+.hue-rotate-filter {
   filter: hue-rotate(30deg);
 }
 
-.sunset-sea-picture {
+.saturate-filter {
   filter: saturate(190%);
 }
 
